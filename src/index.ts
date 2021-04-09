@@ -57,13 +57,8 @@ import {
     );
     console.log('Progress:', text);
     await screenshotElement(page, progressSelector, 'progress.png');
-
     if (!text) throw new Error('Progress text is falsy');
-    //const dayProgress = parseInt(text.slice(10).split('/')[0]);
-    //if (dayProgress === 42) {
-      //console.log("Create repo activity so workflow doesn't get disabled");
     await generateFauxRepoActivity();
-   //}
   }
 
   await browser.close();
